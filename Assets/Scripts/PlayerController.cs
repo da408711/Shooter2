@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
         Movement();
         Shooting();
     }
+
 
     public void LoseALife()
     {
@@ -72,5 +74,6 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y * -1, 0);
         }
 
+      
     }
 }

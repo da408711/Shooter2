@@ -10,13 +10,16 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemyOnePrefab;
     public GameObject cloudPrefab;
-
+    public GameObject ScoreText;
     public TextMeshProUGUI livesText;
 
     public float horizontalScreenSize;
     public float verticalScreenSize;
 
     public int score;
+    internal static object instance;
+
+    public object Score { get; internal set; }
 
     // Start is called before the first frame update
     void Start()
@@ -56,5 +59,10 @@ public class GameManager : MonoBehaviour
     public void ChangeLivesText (int currentLives)
     {
         livesText.text = "Lives: " + currentLives;
+    }
+
+    internal static void IncreaseScore(int v)
+    {
+        throw new System.NotImplementedException();
     }
 }
